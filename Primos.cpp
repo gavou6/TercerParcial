@@ -13,6 +13,31 @@ int esPrimo(int num) {
     return 1;
 }
 
+void saberPrimo() {
+    int num;
+    printf("Ingrese un numero: ");
+    scanf("%i", &num);
+    if (esPrimo(num)) {
+        printf("%i es un numero primo.\n", num);
+    } else {
+        printf("%i no es un numero primo.\n", num);
+    }
+}
+
+void rangoPrimo() {
+    int inicio, fin;
+    printf("Ingrese el rango (inicio y fin):\n");
+    scanf("%i %i", &inicio, &fin);
+    printf("Numeros primos en el rango [%i, %i]: ", inicio, fin);
+    int i;  
+    for (i = inicio; i <= fin; i++) {
+        if (esPrimo(i)) {
+            printf("%i ", i);
+        }
+    }
+    printf("\n");
+}
+
 int menu(){
 	int opc;
 	while(1){
